@@ -36,7 +36,7 @@
                 echo "<td width='300' align='left'>$nome</td>";          
                 echo "<td width='100' align='right'>$cpf</td>";
                 echo "<td width='250' align='right'>$email</td>";
-                echo "<td width='50'> <a href='clientes_pesquisar.php?codigo=$codigo'>Editar</td>";
+                echo "<td width='50'> <a href='clientes_editar.php?codigo=$codigo'>Editar</td>";
             echo "</tr>";
             }
     ?>
