@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `bddespesas_b`
+-- Banco de dados: `bddespesas`
 --
 
 -- --------------------------------------------------------
@@ -37,4 +37,11 @@ CREATE TABLE `clientes` (
   `dataNascimento` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-
+CREATE TABLE 'contas' (
+  'lancamento' INT(4) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  'codigo_cliente' INT(4) NOT NULL,
+  'data' DATE NOT NULL,
+  'valor' DECIMAL(8.2) NOT NULL,
+  'historico' VARCHAR(250) NOT NULL,
+  FOREIGN KEY codigo_cliente REFERENCES clientes(codigo)
+)
