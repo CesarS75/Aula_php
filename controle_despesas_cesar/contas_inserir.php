@@ -23,6 +23,10 @@
                     <td><input type="text" name="lancamento" size="40" maxlength="40" placeholder="Informe o lançamento" required>
                 </tr>
                 <tr>
+                    <td><label for="valor">Código:</label></td>
+                    <td><input type="number" name="codigo_cliente" size="30" maxlength="30" required>
+                </tr>
+                <tr>
                     <td><label for="data">Data:</label></td>
                     <td><input type="date" name="data" size="14" maxlength="14" required>
                 </tr>
@@ -44,12 +48,13 @@
         <?php
         if (isset($_POST["cadastrar"])) {
             $lancamento     = $_POST["lancamento"];
+            $codigo_cliente = $_POST["codigo_cliente"];
             $data           = $_POST["data"];
             $valor          = $_POST["valor"];
             $historico      = $_POST["historico"];
             require "conexao.php";
-            $sql = "INSERT INTO contas(lancamento, , data, valor, historico)";
-            $sql .= " VALUES ('$lancamento', '$data', '$valor', '$historico')";
+            $sql = "INSERT INTO contas(lancamento, codigo_cliente, data, valor, historico)";
+            $sql .= " VALUES ('$lancamento', '$codigo_cliente', '$data', '$valor', '$historico')";
             mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
             echo "<script type =\"text/javascript\">alert('Conta cadastrada com sucesso!');</script>";
             echo "<p align='center'><a href='home.php'>Voltar</a></p>";

@@ -13,33 +13,33 @@
 
         echo "<h3>Listagem das Contas</h3>";
         require "conexao.php";
-        $sql = "SELECT * FROM contas ORDER BY valor";
+        $sql = "SELECT * FROM contas ORDER BY codigo_cliente";
         $resultado=mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
         echo "<table border='1' width='1000' align='center'>";
             echo "<tr>";
-                echo "<th width='100' align='right'>Lançamento</th>";
-                echo "<th width='300' align='left'>Código</th>";          
-                echo "<th width='100' align='left'>Data</th>";
-                echo "<th width='250' align='left'>E-Mail</th>";
-                echo "<th width='50' align='left'>Editar</th>";
+                echo "<th width='200' align='center'>Lançamento</th>";
+                echo "<th width='100' align='center'>Código</th>";          
+                echo "<th width='100' align='center'>Data</th>";
+                echo "<th width='250' align='center'>Valor</th>";
+                echo "<th width='50' align='center'>Histórico</th>";
             echo "</tr>";
     
             while ($linha=mysqli_fetch_array($resultado)) {
-                $lancamento = $linha["lancamento"];
-                $codigo = $linha["codigo"];
-                $data = $linha["data"];
-                $valor = $linha["valor"];
-                $historico = $linha["historico"];
+                $lancamento     = $linha["lancamento"];
+                $codigo_cliente = $linha["codigo_cliente"];
+                $data           = $linha["data"];
+                $valor          = $linha["valor"];
+                $historico      = $linha["historico"];
     
                 // Exibindo os dados
 
             echo "<tr>";
-                echo "<td width='100' align='right'>$lancamento</td>";
-                echo "<td width='300' align='left'>$codigo</td>";          
-                echo "<td width='100' align='right'>$data</td>";
-                echo "<td width='250' align='right'>$valor</td>";
-                echo "<td width='250' align='rigth'>$historico</td>";
-                echo "<td width='50'> <a href='contas_editar.php?codigo=$codigo'>Editar</td>";
+                echo "<td width='200' align='center'>$lancamento</td>";
+                echo "<td width='100' align='center'>$codigo_cliente</td>";          
+                echo "<td width='100' align='center'>$data</td>";
+                echo "<td width='250' align='center'>$valor</td>";
+                echo "<td width='50' align='center'>$historico</td>";
+                echo "<td width='50'> <a href='contas_editar.php?codigo_cliente=$codigo_cliente'>Editar</td>";
             echo "</tr>";
             }
     ?>

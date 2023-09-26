@@ -19,7 +19,6 @@
         $resultado=mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
 
         $linha=mysqli_fetch_array($resultado);
-        $codigo  = $linha["codigo"];
         $nome    = $linha["nome"];
         $cidade  = $linha["cidade"];
         $cpf     = $linha["cpf"];
@@ -28,10 +27,6 @@
 
         echo "<form name='cadastro' method='post' action=''>";
             echo "<table align='center'>";
-                echo "<tr>";
-                    echo "<td> <label for='codigo'>Codigo: </label>";
-                    echo "<td> <input type='text' name='codigo' size='4' value='$codigo' readonly> </td>";
-                echo "</tr>";
 
                 echo "<tr>";
                     echo "<td> <label for='nome'>Nome: </label>";

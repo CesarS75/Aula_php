@@ -21,6 +21,7 @@
             </div>
             <input type="submit" value="Cadastrar" name="cadastrar">
         </form>
+        <p align="center"><a href="index.html">Login</a></p>
     </div>
     <?php
         if(isset($_POST["cadastrar"])) // Se clicou no botão cadastrar
@@ -28,7 +29,7 @@
             $usuario    =   $_POST["usuario"]; // Recupera o que foi digitado na caixa usuário e armazena na variável $usuario
             $senha      =   $_POST["senha"];
             require "conexao.php"; // Importa o arquivo de conexão com o banco
-            $sql="INSERT INTO tblogin (codigo, usuario, senha)"; // Variável $sql recebe informações das colunas e da tabela, para inserir os valores digitados abaixo.
+            $sql="INSERT INTO login (codigo, usuario, senha)"; // Variável $sql recebe informações das colunas e da tabela, para inserir os valores digitados abaixo.
             $sql.=" VALUES (null, '$usuario', '$senha')";
             mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
             echo "<h3>Login cadastrado com sucesso!</h3>";

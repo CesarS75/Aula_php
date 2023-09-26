@@ -17,11 +17,11 @@
         $resultado=mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
         echo "<table border='1' width='1000' align='center'>";
             echo "<tr>";
-                echo "<th width='100' align='right'>Código</th>";
-                echo "<th width='300' align='left'>Nome</th>";          
-                echo "<th width='100' align='left'>CPF</th>";
-                echo "<th width='250' align='left'>E-Mail</th>";
-                echo "<th width='50' align='left'>Editar</th>";
+                echo "<th width='100' align='center'>Código</th>";
+                echo "<th width='300' align='center'>Nome</th>";          
+                echo "<th width='100' align='center'>CPF</th>";
+                echo "<th width='250' align='center'>E-Mail</th>";
+                echo "<th width='50' align='center'>Editar</th>";
             echo "</tr>";
     
             while ($linha=mysqli_fetch_array($resultado)) {
@@ -33,10 +33,10 @@
                 // Exibindo os dados
 
             echo "<tr>";
-                echo "<td width='100' align='right'>$codigo</td>";
-                echo "<td width='300' align='left'>$nome</td>";          
-                echo "<td width='100' align='right'>$cpf</td>";
-                echo "<td width='250' align='right'>$email</td>";
+                echo "<td width='100' align='center'>$codigo</td>";
+                echo "<td width='300' align='center'>$nome</td>";          
+                echo "<td width='100' align='center'>$cpf</td>";
+                echo "<td width='250' align='center'>$email</td>";
                 echo "<td width='50'> <a href='clientes_editar.php?codigo=$codigo'>Editar</td>";
             echo "</tr>";
             }

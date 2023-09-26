@@ -12,6 +12,9 @@
         require "menu.php"; // Importa o menu do sistema de Controle de Despesas
     ?>
     <h3>CONTROLE DE DESPESAS</h3>
-    <img src="imagens/despesas.png" alt="Controle de Despesas">
+
+    <div class="imgMenu">
+        <img src="imagens/despesas.png" alt="Controle de Despesas">
+    </div>
 </body>
 </html>

@@ -4,6 +4,7 @@
 }
 .menu {
     background-color: #333;
+    text-align: center;
 }
 .menu ul {
     margin:0; /* Zera as margens da classe menu, e do elemento (tag) ul */
@@ -17,7 +18,7 @@
     display: block;
     color: #fff;
     text-decoration: none; /* Retira o sublinhado do link */
-    padding:10px 20px; /* Insere espaçamento interno na classe menu */
+    padding:10px 45px; /* Insere espaçamento interno na classe menu */
 }
 .menu ul li a:hover {
     background-color:#157e27; /* Hover é quando passa o mouse  */
@@ -25,6 +26,7 @@
 h3 {
     text-align: center;
     color:cornflowerblue;
+    font-size: 30px;
 }
 body {
     width:1200px;
@@ -35,3 +37,7 @@ body {
     margin:2%;
 }
 
+.imgMenu {
+    display: block;
+    text-align: center;
+}
