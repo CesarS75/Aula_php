@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    padding: 20px;
+    background-color: rgb(72, 41, 122);
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin: 2px;
+    padding: 2px;
+}
+
+.atividade {
+    color: rgb(236, 236, 236);
+}
+
+.pzin {
+    margin-bottom: 20px;
+    font-family: 'Agbalumo';
+    font-size: large;
+}
+
+.direitos {
+    text-align: center;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+@keyframes slidein {
+    from {
+      margin-left: 0%;
+      width: 10%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
